@@ -11,7 +11,7 @@ def index(request):
     data = yf.download("BTC-USD", period="1mo", group_by="tickers")
     # This is how to do it in the python shell. How to save and recall this info...
     # data2 = yf.download("AMZN", period="1mo")
-    fplt.candlestick_ochl(data1[['Open', 'Close', 'High', 'Low']])
+    fplt.candlestick_ochl(data[['Open', 'Close', 'High', 'Low']])
     # fplt.candlestick_ochl(data2[['Open', 'Close', 'High', 'Low']])
     fplt.save('graph.png', 'BASE_DIR/graph/')
     context = {
